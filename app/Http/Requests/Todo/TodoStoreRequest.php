@@ -40,6 +40,6 @@ class TodoStoreRequest extends FormRequest
 
     protected function failedValidation(Validator $validator)
     {
-        return response()->json($validator->errors()->first())->throwResponse();
+        return response()->json($validator->errors())->throwResponse();
     }
 }

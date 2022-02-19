@@ -12,6 +12,9 @@ export const GlobalStyles = createGlobalStyle`
     min-height : 100vh;
     width : 100%;
     }
+    p {
+    margin : 0;
+    }
     `
 
 const Centered = styled.div`

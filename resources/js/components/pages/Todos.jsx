@@ -21,10 +21,10 @@ export default function Todos() {
     const [users, setUsers] = useState([])
     const [todos, setTodos] = useState([]);
     const [selectedUser, setSelectedUser] = useState();
-    const changeUser = (todoId,userId) => {
+    const changeUser = (todoId, userId) => {
         const data = {
-            id : todoId,
-            user_id : userId
+            id: todoId,
+            user_id: userId
         }
         AxiosInstance().post('/api/todo/update', data).then(response => {
             if (response.status === HTTP_OK) {
@@ -71,10 +71,8 @@ export default function Todos() {
                 })
             } else {
                 Object.keys(response.data).map(key => {
-                    response.data[key].forEach(error => {
-                        setErrors(prevState => [prevState, error]);
+                        setErrors(prevState => [prevState, response.data[key]]);
                     })
-                })
             }
         });
     }
@@ -170,7 +168,7 @@ export default function Todos() {
                                                             option.value === todo.user_id)
                                                     }
                                                     options={users}
-                                                    onChange={(e) => changeUser(todo.id,e.value)}
+                                                    onChange={(e) => changeUser(todo.id, e.value)}
                                                 />
                                             </td>
                                             <td className={'align-middle text-center'}>

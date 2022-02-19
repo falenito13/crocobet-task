@@ -29,8 +29,10 @@ export default function Login() {
             if (response.data.status === HTTP_OK) {
                 User.authenticated(response.data, authenticatedCallback)
             } else {
-                Object.keys(response.data).forEach(key => {
-                    setErrors(prevState => [...prevState, response.data[key]]);
+                Object.keys(response.data).map(key => {
+                    response.data[key].forEach(error => {
+                        setErrors(prevState => [...prevState, error]);
+                    })
                 })
             }
         })

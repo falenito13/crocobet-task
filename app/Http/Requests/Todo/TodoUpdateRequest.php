@@ -28,7 +28,7 @@ class TodoUpdateRequest extends FormRequest
     {
         return [
             'id' => ['required', 'integer', 'exists:todos,id'],
-            'status_id' => ['sometimes', 'integer', function ($attribute, $value, $fail) {
+            'status_id' => ['sometimes', 'integer','exists:todo_statuses,id', function ($attribute, $value, $fail) {
                 $todoStatusId = Todo::find($this->id)->status_id;
                 if ($value !== Todo::find($this->id)->status_id + 1) {
                     $todoStatusName = (new Todo())->getStatusNameById($todoStatusId);
