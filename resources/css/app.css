@@ -1,0 +1,37 @@
+.react-datepicker__input-container{
+    width: 140px;
+    cursor: pointer;
+    background-size: 20px!important;
+    height: 48px;
+    background-color: #FFFFFF;
+    color: #3D3E38;
+    text-align: center;
+    border: 0px solid;
+    border-radius: 4px;
+}
+
+.react-datepicker__input-container input {
+    border : none;
+    text-align: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+}
+
+@media screen and (max-width : 768px){
+    table {
+        width : 80% !important;
+        margin: 0 auto;
+    }
+}
+
+::-webkit-input-placeholder { color:#6e6a69; }
+::-moz-placeholder { color:#6e6a69 } /* firefox 19+ */
+:-ms-input-placeholder { color:#6e6a69; } /* ie */
+input:-moz-placeholder { color:#6e6a69; }

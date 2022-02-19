@@ -1,0 +1,15 @@
+export const HeaderHeightDesktop = '80px'
+export const HeaderHeightMobile = '40px'
+export const LogoWidthDesktop = '60px'
+export const LogoHeightDesktop = '46px'
+export const LogoWidthMobile = '24px'
+export const LogoHeightMobile = '18px'
+export const DEFAULT_GREEN = '#00b100'
+export const DEFAULT_GREEN_HOVER = '#08bf08'
+export const DEFAULT_RED = '#be1915'
+export const DEFAULT_RED_HOVER = '#d41c17'
+export const DEFAULT_WHITE = '#FFFFFF'
+export const BODY_COLOR = '#11161e'
+export const NAVBAR_COLOR = '#1d242c'
+export const statusButtonColors = ['#3246a8', '#8a6715', '#00b100']
+
